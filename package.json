@@ -1,18 +1,20 @@
 {
+  "name": "nextjs-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier -wu --cache .",
+    "format:check": "prettier -cu --cache .",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "eslint": "^7.32.0",
+    "@turbo/gen": "^1.10.0",
+    "eslint": "^8.41.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
-    "turbo": "^1.9.7"
+    "prettier": "^2.8.8",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "turbo": "^1.10.0"
   },
-  "packageManager": "pnpm@7.15.0",
-  "name": "nextjs-monorepo"
+  "packageManager": "pnpm@7.15.0"
 }
