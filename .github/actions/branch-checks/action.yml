@@ -1,0 +1,17 @@
+name: Branch Checks
+description: Run checks for linting, formatting, and typescript
+
+runs:
+  using: composite
+  steps:
+    - name: tsc 🔎
+      run: pnpm typecheck
+      shell: bash
+
+    - name: Format 📎
+      run: pnpm format:check
+      shell: bash
+
+    - name: Lint ✅
+      run: pnpm lint
+      shell: bash

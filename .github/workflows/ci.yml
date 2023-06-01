@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - dependabot/**
+  workflow_dispatch:
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Install PNPM and dependencies
+        uses: ./.github/actions/install-pnpm
+      - name: Branch Checks 🔥
+        uses: ./.github/actions/branch-checks
+      - name: Build 🏗️
+        uses: ./.github/actions/build-apps

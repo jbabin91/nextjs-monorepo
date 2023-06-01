@@ -1,0 +1,16 @@
+name: Build Apps
+description: Build Web Applications
+
+runs:
+  using: composite
+  steps:
+    - name: Cache build ⚡
+      uses: actions/cache@v3
+      with:
+        path: |
+          ${{ github.workspace }}/.next/cache
+        key: nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('**.ts', '**.tsx') }}
+
+    - name: Build 🏗️
+      run: pnpm build
+      shell: bash

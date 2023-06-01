@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf node_modules coverage .next .turbo",
     "update-dependencies": "pnpx npm-check-updates -u -p pnpm"
   },
   "dependencies": {

@@ -5,8 +5,10 @@
   "main": "./index.tsx",
   "types": "./index.tsx",
   "scripts": {
+    "clean": "rimraf node_modules coverage .next .turbo",
     "generate:component": "turbo gen react-component",
     "lint": "eslint --ext .ts,.tsx --cache .",
+    "typecheck": "tsc -p tsconfig.json",
     "update-dependencies": "pnpx npm-check-updates -u -p pnpm"
   },
   "devDependencies": {
