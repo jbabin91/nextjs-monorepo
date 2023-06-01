@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "main": "index.js",
+  "scripts": {
+    "update-dependencies": "pnpx npm-check-updates -u -p pnpm"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
@@ -10,7 +13,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-turbo": "^1.10.1",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2"
   },

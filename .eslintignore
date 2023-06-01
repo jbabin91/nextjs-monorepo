@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.turbo
+
+*.hbs
+
+pnpm-lock.yaml
+
+!.commitlintrc.ts

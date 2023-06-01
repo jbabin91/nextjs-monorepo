@@ -6,20 +6,14 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "update-dependencies": "pnpx npm-check-updates -u -p pnpm"
   },
   "dependencies": {
-    "next": "^13.4.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "^5.0.4"
+    "tsconfig": "workspace:*"
   }
 }
