@@ -8,7 +8,8 @@ runs:
       uses: actions/cache@v3
       with:
         path: |
-          ${{ github.workspace }}/.next/cache
+          ${{ github.workspace }}/apps/docs/.next/cache
+          ${{ github.workspace }}/apps/web/.next/cache
         key: nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('**.ts', '**.tsx') }}
 
     - name: Build 🏗️
