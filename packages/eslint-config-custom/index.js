@@ -8,6 +8,15 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'prettier',
   ],
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')],
@@ -47,15 +56,14 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'sort-keys-fix/sort-keys-fix': 'warn',
   },
-  parser: '@typescript-eslint/parser',
   settings: {
-    react: {
-      version: 'detect',
-    },
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
       },
+    },
+    react: {
+      version: 'detect',
     },
   },
 };
